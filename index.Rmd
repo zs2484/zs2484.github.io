@@ -1,0 +1,40 @@
+---
+title: "My awesome website"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+# This is Zichen's awesome website
+
+
+## Here's a subsection
+
+And here's some addition text ...
+
+```{r}
+rnorm(10)
+```
+
+# Links to other websites
+
+Let's link to useful tools for data science:
+
+* [Google](https://www.google.com/)
+* [P8105](https://p8105.com)
+
+
+
+# Link to page within the site
+
+[About me](about.html)
+
+
+
+
+
+
+
+
+
