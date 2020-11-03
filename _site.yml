@@ -7,6 +7,8 @@ navbar:
       href: about.html
     - text: "Plotly"
       href: plotly.html
+    - text: "dashboard"
+      href: dashboard.html
     - icon: fa-envelope fa-lg
       href: mailto:<zs2484@cumc.columbia.edu>
     - icon: fa-github fa-lg
