@@ -1,0 +1,17 @@
+---
+title: "Plotly examples"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+# Loading data
+
+We're gonna look at NYC Airbnb data. 
+
+```{r}
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+```
