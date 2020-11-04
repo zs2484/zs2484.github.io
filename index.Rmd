@@ -9,13 +9,7 @@ output:
 # This is Zichen's awesome website
 
 
-## Here's a subsection
 
-And here's some addition text ...
-
-```{r}
-rnorm(10)
-```
 
 # Links to other websites
 
