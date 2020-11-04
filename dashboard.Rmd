@@ -54,7 +54,7 @@ ny_noaa %>%
   summarize(avg_tmax = mean(tmax)) %>% 
   drop_na() %>% 
   plot_ly(y = ~avg_tmax, x = ~year, color = ~id,
-          type = "violin", colors = "viridis") %>%   
+          type = "bar", colors = "viridis") %>%   
   layout(title = "Average Max Temp for Each Sation in March from 1981-2010",
          xaxis = list(title = "Year"), yaxis = list(title = "Average Max Temp"))
 ```
