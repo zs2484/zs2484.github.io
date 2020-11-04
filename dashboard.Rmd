@@ -15,15 +15,15 @@ library(plotly)
 ```
 
 
-```{r}
+```{r, message = FALSE, warning = FALSE}
 data("ny_noaa")
 
 ny_noaa = ny_noaa %>%
-  
   separate(date, c("year", "month", "day")) %>% 
   mutate(across(year:tmin,as.numeric),
          tmax = tmax / 10,
-         tmin = tmin / 10)
+         tmin = tmin / 10) %>% 
+  drop_na()
 ```
 
 Column {data-width=650}
@@ -33,7 +33,6 @@ Column {data-width=650}
 
 ```{r}
 ny_noaa %>%
-  drop_na() %>% 
   filter(id == "USC00303346",
          between(snow,0,100), !is.na(snow)) %>% 
   mutate(text_label = str_c("Year: ", year, "\nSnow Depth: ", snow, "mm")) %>% 
@@ -50,7 +49,6 @@ Column {data-width=350}
 
 ```{r}
 ny_noaa %>% 
-  drop_na() %>% 
   filter(month == 3) %>% 
   group_by(year, id) %>% 
   summarize(avg_tmax = mean(tmax)) %>% 
@@ -65,7 +63,6 @@ ny_noaa %>%
 
 ```{r}
 ny_noaa %>% 
-  drop_na() %>% 
   filter(month == 9) %>% 
   group_by(year, id) %>% 
   summarize(avg_tmax = mean(tmax)) %>% 
